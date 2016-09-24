@@ -27,19 +27,9 @@ The following **additional** features are implemented:
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
-<table>
-<tbody>
-<tr>
-<td>
-<p>Required functionality</p>
-<img src='https://github.com/DeekshaPrabhakar/tipper/blob/master/tipperWalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-</td>
-<td>
-<p>Optional features</p>
-<img src='https://github.com/DeekshaPrabhakar/tipper/blob/master/tipperWalkthroughOptional.gif' title='Video Walkthrough' width='' alt='Optional features video Walkthrough' />
-</td>
-</tbody>
-</table>
+
+<img src='https://github.com/DeekshaPrabhakar/tipper/blob/master/tipperWalkthroughComplete.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
