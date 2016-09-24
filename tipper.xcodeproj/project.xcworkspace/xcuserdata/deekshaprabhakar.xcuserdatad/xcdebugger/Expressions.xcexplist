@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "TipperBrain.getDefaultTip() -&gt; ():TipperBrain.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidLoad() -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "billValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.updateViewData() -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "billValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TipperBrain.updateLastBillAmount() -&gt; ():TipperBrain.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TipperBrain.appBackInTenMins() -&gt; ():TipperBrain.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "appBackgroundEnterTime">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewWillAppear(Bool) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tipControl.numberOfSegments">
+            </PersistentString>
+            <PersistentString
+               value = "billValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
