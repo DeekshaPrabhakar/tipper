@@ -24,3 +24,12 @@ The following **additional** features are implemented:
 - [x] MVC, moved all logic to model from controller.
 
 
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://github.com/DeekshaPrabhakar/tipper/blob/master/tipperWalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
