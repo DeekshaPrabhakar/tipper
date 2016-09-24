@@ -79,7 +79,7 @@ class TipperBrain: NSObject {
         print("currentDateTime: \(currentDateTime)")
         print("appBackgroundEnterTime: \(appBackgroundEnterTime)")
         
-        if (minutes < 2){
+        if (minutes < 10){//less than 10 mins
             print("within 10 mins")
             print(getLastBillAmount())
         }
