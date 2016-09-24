@@ -42,4 +42,7 @@ Here's a walkthrough of implemented user stories:
 </table>
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
+## Notes
 
+* This only works on iPhone 5s in portrait orientation.
+* In simulator when "Language & Region" is changed, all the apps are killed, hence data is not persisited.
