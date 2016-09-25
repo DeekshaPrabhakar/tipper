@@ -38,4 +38,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 * In simulator when "Language & Region" is changed, all the apps are killed, hence data is not persisited.
 
 ##Acknowledgements
-<span class="wysiwyg-font-size-large"><br>Icon made by <a href="http://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from&nbsp;<a title="Flaticon" href="http://www.flaticon.com">www.flaticon.com</a>&nbsp;is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0</span>
+* <span class="wysiwyg-font-size-large"><br>App icon made by <a href="http://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from&nbsp;<a title="Flaticon" href="http://www.flaticon.com">www.flaticon.com</a>&nbsp;is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0</span>
+
+* <span class="wysiwyg-font-size-large"><br>Launch icon made by <a href="http://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from&nbsp;<a title="Flaticon" href="http://www.flaticon.com">www.flaticon.com</a>&nbsp;is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0</span>
+
