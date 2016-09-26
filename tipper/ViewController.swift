@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    
+    @IBOutlet weak var inputBillView: UIView!
+    
+    @IBOutlet weak var resultOutputView: UIView!
     //Properties
     private var brain = TipperBrain()
     let currencySymbol = Locale.current.currencySymbol
@@ -39,6 +43,30 @@ class ViewController: UIViewController {
     //Update tip and total on billField oneditingChanged event and tipControl valuechanged event
     @IBAction func updateTipNTotal(_ sender: AnyObject) {
         updateLabels()
+        if(billValue == 0){
+            fadeOutResultView()
+        }
+        else {
+            fadeInResultView()
+        }
+    }
+    
+    func fadeInResultView() {
+        UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            self.resultOutputView.alpha = 1
+
+            }, completion: nil)
+        
+    }
+    
+    func fadeOutResultView() {
+        UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.resultOutputView.alpha = 0
+            
+            }, completion: nil)
+        /*UIView.animate(withDuration: 0.6, animations: {
+            self.resultOutputView.alpha = 0
+        })*/
     }
     
     func formatForCurrency(amt: Double) -> String {
@@ -88,6 +116,14 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         print("view will appear")
         
+        self.inputBillView.alpha = 0
+        self.resultOutputView.alpha = 0
+        UIView.animate(withDuration: 0.4, animations: {
+            // This causes first view to fade in and second view to fade out
+            self.inputBillView.alpha = 1
+            //self.secondView.alpha = 0
+        })
+        
         //read persisted tip index
         brain.getDefaultTip()
         
@@ -100,6 +136,7 @@ class ViewController: UIViewController {
             //reflect the change from settings in tip and total
             if(billValue > 0){
                 updateLabels()
+                fadeInResultView()
             }
         }
     }
