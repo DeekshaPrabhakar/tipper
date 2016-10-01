@@ -4,7 +4,7 @@
 
 Submitted by: **Deeksha Prabhakar**
 
-Time spent: **9** hours spent in total
+Time spent: **12** hours spent in total
 
 ## User Stories
 
@@ -18,6 +18,7 @@ The following **optional** features are implemented:
 * [x] Remembering the bill amount across app restarts (if <10mins)
 * [x] Using locale-specific currency and currency thousands separators.
 * [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [x] Color theme options added to the settings view, view controller and settings view UI updated according to theme selection
 
 The following **additional** features are implemented:
 
