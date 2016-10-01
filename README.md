@@ -22,6 +22,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+- [x] Per person breakdown of total for upto six people.
 - [x] MVC, moved all logic to model from controller.
 - [x] App Icon added
 - [x] Launch image added with autolayout constraints
@@ -30,8 +31,15 @@ The following **additional** features are implemented:
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
-
+<table>
+<tr><th>Walkthrough of all stories, except theme selection</th><th>Updated UI, theme selection added to settings</th></tr>
+<tr><td>
 <img src='https://github.com/DeekshaPrabhakar/tipper/blob/master/tipperWalkthroughWithAnimations.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+</td>
+<td><img src='https://github.com/DeekshaPrabhakar/tipper/blob/master/tipperWalkthroughWithThemeSelection.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+</td>
+</tr>
+</table>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
