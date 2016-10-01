@@ -16,10 +16,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
-    
     @IBOutlet weak var inputBillView: UIView!
-    
     @IBOutlet weak var resultOutputView: UIView!
+    
+    @IBOutlet weak var billPerPersonTwo: UILabel!
+    @IBOutlet weak var billPerPersonThree: UILabel!
+    @IBOutlet weak var billPerPersonFour: UILabel!
+    @IBOutlet weak var billPerPersonFive: UILabel!
+    @IBOutlet weak var billPerPersonSix: UILabel!
+    @IBOutlet weak var billAmountLabel: UILabel!
+    @IBOutlet weak var tipAddSymbolLbl: UILabel!
+    @IBOutlet weak var tipTotalSeparatorLine: UIView!
+    
     //Properties
     private var brain = TipperBrain()
     let currencySymbol = Locale.current.currencySymbol
@@ -56,7 +64,6 @@ class ViewController: UIViewController {
             self.resultOutputView.alpha = 1
 
             }, completion: nil)
-        
     }
     
     func fadeOutResultView() {
@@ -85,6 +92,11 @@ class ViewController: UIViewController {
         
         tipLabel.text = formatForCurrency(amt: brain.tipAmount)
         totalLabel.text = formatForCurrency(amt: brain.totalAmount)
+        billPerPersonTwo.text = formatForCurrency(amt: (brain.totalAmount/2))
+        billPerPersonThree.text = formatForCurrency(amt: (brain.totalAmount/3))
+        billPerPersonFour.text = formatForCurrency(amt: (brain.totalAmount/4))
+        billPerPersonFive.text = formatForCurrency(amt: (brain.totalAmount/5))
+        billPerPersonSix.text = formatForCurrency(amt: (brain.totalAmount/6))
     }
     
     override func viewDidLoad() {
@@ -107,6 +119,24 @@ class ViewController: UIViewController {
         brain.updateAppEnterBackgroundTime()
     }
     
+    func updateUITheme() {
+        let themeCurrentColor = brain.getCurrentTheme()
+        let themeColor = brain.getThemeColor(themeColor: themeCurrentColor)
+        self.view.backgroundColor = themeColor.0
+        tipControl.tintColor = themeColor.1
+        billField.textColor = themeColor.1
+        totalLabel.textColor = themeColor.1
+        tipLabel.textColor = themeColor.1
+        billAmountLabel.textColor = themeColor.1
+        tipAddSymbolLbl.textColor = themeColor.1
+        billPerPersonTwo.textColor = themeColor.1
+        billPerPersonThree.textColor = themeColor.1
+        billPerPersonFour.textColor = themeColor.1
+        billPerPersonFive.textColor = themeColor.1
+        billPerPersonSix.textColor = themeColor.1
+        tipTotalSeparatorLine.backgroundColor = themeColor.1
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -116,6 +146,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         print("view will appear")
         
+        updateUITheme()
         self.inputBillView.alpha = 0
         self.resultOutputView.alpha = 0
         UIView.animate(withDuration: 0.4, animations: {

@@ -36,6 +36,11 @@ class TipperBrain: NSObject {
         return lastBillAmount
     }
     
+    func getCurrentTheme() -> String {
+        let defaults = UserDefaults.standard
+        let theme = defaults.string(forKey: "CurrentTheme")
+        return theme!
+    }
     
     //set data to persist
     func updateDefaultTip(tipPercent: Int) {
@@ -53,6 +58,12 @@ class TipperBrain: NSObject {
     func updateLastBillAmount(bill: Double) {
         let defaults = UserDefaults.standard
         defaults.set(bill, forKey: "LastBillAmount")
+        defaults.synchronize()
+    }
+    
+    func updateCurrentTheme(theme: String) {
+        let defaults = UserDefaults.standard
+        defaults.set(theme, forKey: "CurrentTheme")
         defaults.synchronize()
     }
     
@@ -87,6 +98,21 @@ class TipperBrain: NSObject {
             print("More than 10 mins")
             updateLastBillAmount(bill: 0.0)
         }
+    }
+    
+    func getThemeColor(themeColor: String) -> (UIColor, UIColor) {
+        var someTuple = (lightColor : UIColor.init(red: CGFloat(243)/255, green: CGFloat(229)/255, blue: CGFloat(245)/255, alpha: 1), darkColor: UIColor.init(red: CGFloat(147)/255, green: CGFloat(62)/255, blue: CGFloat(197)/255, alpha: 1))
+        switch themeColor {
+        case "Purple":
+            someTuple = (lightColor : UIColor.init(red: CGFloat(243)/255, green: CGFloat(229)/255, blue: CGFloat(245)/255, alpha: 1), darkColor: UIColor.init(red: CGFloat(147)/255, green: CGFloat(62)/255, blue: CGFloat(197)/255, alpha: 1))
+        case "Pink":
+            someTuple = (lightColor : UIColor.init(red: CGFloat(255)/255, green: CGFloat(235)/255, blue: CGFloat(238)/255, alpha: 1), darkColor: UIColor.init(red: CGFloat(255)/255, green: CGFloat(128)/255, blue: CGFloat(171)/255, alpha: 1))
+        case "Cyan":
+            someTuple = (lightColor : UIColor.init(red: CGFloat(225)/255, green: CGFloat(245)/255, blue: CGFloat(254)/255, alpha: 1), darkColor: UIColor.init(red: CGFloat(0)/255, green: CGFloat(188)/255, blue: CGFloat(212)/255 , alpha: 1 ))
+        default:
+             someTuple = (lightColor : UIColor.init(red: CGFloat(243)/255, green: CGFloat(229)/255, blue: CGFloat(245)/255, alpha: 1), darkColor: UIColor.init(red: CGFloat(147)/255, green: CGFloat(62)/255, blue: CGFloat(197)/255, alpha: 1))
+        }
+        return someTuple
     }
     
     private func addMinutes(MinsToAdd: Int, dt:NSDate) -> NSDate {
